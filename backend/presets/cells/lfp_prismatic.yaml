@@ -1,0 +1,26 @@
+# LFP Prismatic cell preset
+# Based on typical LFP prismatic cells (e.g., CATL, BYD Blade)
+
+name: LFP Prismatic
+description: Lithium Iron Phosphate prismatic cell, high safety
+
+chemistry: LFP
+capacity_ah: 100.0
+mass_kg: 1.8
+
+# Thermal properties
+specific_heat: 1100.0  # J/(kg·K) - slightly higher for larger cells
+thermal_resistance: 0.8  # K/W - better contact in prismatic pack
+
+# Cell format
+cell_type: prismatic
+width_mm: 148.0
+depth_mm: 27.0
+height_mm: 91.0
+
+# Thermal runaway characteristics (LFP is more thermally stable)
+thermal_runaway:
+  onset_temp_c: 210.0  # Higher onset than NMC
+  peak_heat_w: 3000.0  # Lower peak heat
+  total_energy_kj: 80.0  # Less total energy released
+  duration_s: 45.0  # Slower, more gradual event

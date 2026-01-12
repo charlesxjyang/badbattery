@@ -1,0 +1,25 @@
+# NMC622 21700 cylindrical cell preset
+# Based on typical high-energy 21700 cells (e.g., Samsung 50E, LG M50)
+
+name: NMC622 21700
+description: High-energy NMC622 cylindrical cell, 5Ah class
+
+chemistry: NMC622
+capacity_ah: 5.0
+mass_kg: 0.068
+
+# Thermal properties
+specific_heat: 1020.0  # J/(kg·K) - typical for Li-ion cells
+thermal_resistance: 1.5  # K/W - cell-to-cell through casing/air gap
+
+# Cell format
+cell_type: cylindrical_21700
+diameter_mm: 21.0
+height_mm: 70.0
+
+# Thermal runaway characteristics (NMC tends to have aggressive TR)
+thermal_runaway:
+  onset_temp_c: 150.0  # Separator breakdown / onset
+  peak_heat_w: 6000.0  # Peak heat generation
+  total_energy_kj: 120.0  # Total energy released
+  duration_s: 25.0  # TR event duration
